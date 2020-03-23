@@ -24,7 +24,9 @@ $(document).ready(function ()
         snapshot.forEach((childSnapshot) =>
         {
             childSnapshot.forEach((childrenSnapshot) =>
-            {
+            {   if (childrenSnapshot.val()== null){
+                $("#notfound").append("Data Is Null");
+            }else{
                 var name = childrenSnapshot.child("User_Name").val();
                 var date_and_time = childrenSnapshot.child("Date_and_Time").val();
                 var bike_brand = childrenSnapshot.child("Brand").val();
@@ -33,6 +35,7 @@ $(document).ready(function ()
                 var location = childrenSnapshot.child("Location").val();
                 $("#breakdown_service_table_body").append("<tr><td></td><td>" + name + "</td><td>" + date_and_time + "</td><td style=\"white-space:pre-wrap; word-wrap:break-word\">" + bike_brand + "</td><td>" + bike_model + "</td><td>" + type_service + "</td><td>" + location + "</td>");
                 addSerial_Number();
+            }
                 ///
             });
         });
