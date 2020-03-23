@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8">
+    <title>MotoFit</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.brown-red.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-analytics.js"></script>
+
+</head>
+<body>
+<script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyCnamvbF_WXwvDeGlRdzkwtONlb05VQ8u0",
+        authDomain: "motofit-33a89.firebaseapp.com",
+        databaseURL: "https://motofit-33a89.firebaseio.com",
+        projectId: "motofit-33a89",
+        storageBucket: "motofit-33a89.appspot.com",
+        messagingSenderId: "894050433093",
+        appId: "1:894050433093:web:fd3b0b4408f4ac01f88b2c",
+        measurementId: "G-8PLQT46RYJ"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+</script>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<div
+        class="mdl-layout mdl-js-layout mdl-layout--fixed-header
+                    mdl-layout--fixed-tabs">
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <!-- Title -->
+            <span class="mdl-layout-title">Motofit Admin Panel</span>
+        </div>
+
+    </header>
+    <div class="mdl-layout__drawer" style="background: #f7f7f7">
+        <span class="mdl-layout-title"><a href="index.html" ><img src="motofit_img.jpg" height="120" width="170"></a></span>
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="Customer_Information.html" >Customer Information</a>
+            <a class="mdl-navigation__link" href="Service_Booking.html">Service Booked</a>
+            <a class="mdl-navigation__link" href="Breakdown_Service.html">Breakdown Service</a>
+            <a class="mdl-navigation__link" href="Delivering_Service.html">Delivering Two Wheeler</a>
+        </nav>
+    </div>
+    <main class="mdl-layout__content" style="background: #f7f7f7">
+        <center><img src="motofit_img.jpg" height="60%" width="50%"></center>
+
+
+    </main>
+</div>
+
+</body>
+</html>

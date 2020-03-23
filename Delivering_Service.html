@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8">
+    <title>MotoFit</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.brown-red.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-analytics.js"></script>
+
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/css/mdb.min.css" rel="stylesheet">
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/js/mdb.min.js"></script>
+
+
+</head>
+<body>
+<form method="post" action="Delivering_Service.php">
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCnamvbF_WXwvDeGlRdzkwtONlb05VQ8u0",
+            authDomain: "motofit-33a89.firebaseapp.com",
+            databaseURL: "https://motofit-33a89.firebaseio.com",
+            projectId: "motofit-33a89",
+            storageBucket: "motofit-33a89.appspot.com",
+            messagingSenderId: "894050433093",
+            appId: "1:894050433093:web:fd3b0b4408f4ac01f88b2c",
+            measurementId: "G-8PLQT46RYJ"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <div
+            class="mdl-layout mdl-js-layout mdl-layout--fixed-header
+                    mdl-layout--fixed-tabs">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title">Motofit Admin Panel</span>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer" style="background: #f7f7f7">
+            <span class="mdl-layout-title"><a href="index.html"><img src="motofit_img.jpg" height="150" width="150"></a></span>
+            <hr>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="Customer_Information.html">Customer Information</a>
+                <a class="mdl-navigation__link" href="Service_Booking.html">Service Booked</a>
+                <a class="mdl-navigation__link" href="Breakdown_Service.html">Breakdown Service</a>
+                <a class="mdl-navigation__link" href="Delivering_Service.html">Delivering Vehicle</a>
+            </nav>
+        </div>
+        <main class="mdl-layout__content is-active" style="background: #f7f7f7">
+
+            <!--BreakDown Service Tab-->
+            <section class="mdl-layout__tab-panel is-active" id="fixed-tab-3">
+                <div class="page-content">
+                    <div class="card text-center" style="max-width: 150rem;">
+                        <div class="card-header">
+                            <h2>Delivering Vehicle</h2>
+                        </div>
+                        <div class="card-body">
+                            <center>
+
+                                <h5><b>SMS to Customer for Drop Vehicle</b></h5>
+                                <div class="mdl-textfield mdl-js-textfield">
+                                    <input class="mdl-textfield__input" type="text" name="phone_number"
+                                           pattern="-?[0-9]*(\.[0-9]+)?" id="sample2">
+                                    <label class="mdl-textfield__label" for="sample2">Phone Number....</label>
+                                    <span class="mdl-textfield__error">Please Enter correct Number!</span>
+                                </div>
+                                <br>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="date" name="date" id="date">
+                                    <label class="mdl-textfield__label" for="sample2">Select Date</label>
+                                    <span class="mdl-textfield__error">Please Select Date!</span>
+                                </div>
+                                <br>
+
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <input class="mdl-textfield__input" type="time" name="time" id="time">
+                                    <label class="mdl-textfield__label" for="sample2"Select Time</label>
+                                    <span class="mdl-textfield__error">Please Select Time!</span>
+                                </div>
+                                <br>
+                                <div class="mdl-textfield mdl-js-textfield">
+                                    <select name="msg" id="select" class="mdl-textfield__input">
+                                        <option>- - Select - -</option>
+                                        <option>- Drop Vehicle -</option>
+                                        <option>- Pick-Up Vehicle -</option>
+                                    </select>
+                                </div>
+                                <br>
+                                <button class="mdl-button mdl-js-button mdl-button--raised">
+                                    Send SMS
+                                </button>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--END-->
+
+        </main>
+    </div>
+</form>
+
+</body>
+</html>
