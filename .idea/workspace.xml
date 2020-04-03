@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fa249e2c-a2ed-4c99-8b01-fa7087fc3127" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Breakdown_Service.html" beforeDir="false" afterPath="$PROJECT_DIR$/Breakdown_Service.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Customer_Information.html" beforeDir="false" afterPath="$PROJECT_DIR$/Customer_Information.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Customer_Information.js" beforeDir="false" afterPath="$PROJECT_DIR$/Customer_Information.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Delivering_Service.html" beforeDir="false" afterPath="$PROJECT_DIR$/Delivering_Service.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service_Booking.html" beforeDir="false" afterPath="$PROJECT_DIR$/Service_Booking.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +13,13 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -30,6 +32,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -52,18 +55,51 @@
       <workItem from="1584938685858" duration="3692000" />
       <workItem from="1584977411879" duration="3037000" />
       <workItem from="1584983227151" duration="448000" />
-      <workItem from="1585067192673" duration="2500000" />
+      <workItem from="1585067192673" duration="3069000" />
+      <workItem from="1585814566684" duration="508000" />
+      <workItem from="1585896178111" duration="4909000" />
     </task>
+    <task id="LOCAL-00001" summary="adding Bill generating Module">
+      <created>1585901147475</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1585901147475</updated>
+    </task>
+    <task id="LOCAL-00002" summary="adding Bill generating Module">
+      <created>1585901180020</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1585901180020</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="adding Bill generating Module" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding Bill generating Module" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="390" y="272" key="com.intellij.ide.util.TipDialog" timestamp="1585067197410">
+    <state x="320" y="115" key="#Notifications" timestamp="1585901233596">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="390" y="272" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1585067197410" />
+    <state x="320" y="115" key="#Notifications/0.0.1440.900@0.0.1440.900" timestamp="1585901233596" />
+    <state x="331" y="52" key="CommitChangelistDialog2" timestamp="1585901180043">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="331" y="52" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1585901180043" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1585901199339">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1585901199339" />
+    <state x="390" y="272" key="com.intellij.ide.util.TipDialog" timestamp="1585901278984">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="390" y="272" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1585901278984" />
     <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1584941024319">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
