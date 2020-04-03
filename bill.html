@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8">
+    <title>MotoFit</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.brown-red.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-app.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-analytics.js"></script>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/css/mdb.min.css" rel="stylesheet">
+
+</head>
+<body>
+<script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyCnamvbF_WXwvDeGlRdzkwtONlb05VQ8u0",
+        authDomain: "motofit-33a89.firebaseapp.com",
+        databaseURL: "https://motofit-33a89.firebaseio.com",
+        projectId: "motofit-33a89",
+        storageBucket: "motofit-33a89.appspot.com",
+        messagingSenderId: "894050433093",
+        appId: "1:894050433093:web:fd3b0b4408f4ac01f88b2c",
+        measurementId: "G-8PLQT46RYJ"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+</script>
+<script src="Customer_Information.js"></script>
+
+
+<div
+        class="mdl-layout mdl-js-layout mdl-layout--fixed-header
+                    mdl-layout--fixed-tabs">
+    <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <!-- Title -->
+            <span class="mdl-layout-title">Motofit Admin Panel</span>
+        </div>
+    </header>
+    <div class="mdl-layout__drawer" style="background: #f7f7f7">
+        <span class="mdl-layout-title"><a href="index.html"><img src="motofit_img.jpg" height="150px" width="150px"></a></span>
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="Customer_Information.html">Customer Information</a>
+            <a class="mdl-navigation__link" href="Service_Booking.html">Service Booked</a>
+            <a class="mdl-navigation__link" href="Breakdown_Service.html">Breakdown Service</a>
+            <a class="mdl-navigation__link" href="bill.html">Billing Tab</a>
+            <a class="mdl-navigation__link" href="Delivering_Service.html">Delivering Two Wheeler</a>
+        </nav>
+    </div>
+    <main class="mdl-layout__content" style="background: #f7f7f7">
+        <!--User List Tab-->
+        <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
+            <div class="page-content">
+                <div class="card text-center">
+                    <div class="card-header">
+                        <h2>Motofit Service Bill</h2>
+                    </div>
+                    <div class="card-body">
+                        <center>
+                                <table border="1" style="background: #f7f7f7">
+                                    <tr>
+                                        <td width="100" colspan="8"><center>Bill To</center></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="100">Name :</td>
+                                        <td width="100" colspan="7"><center>- - -</center></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="100">Contact :</td>
+                                        <td width="100" colspan="7"><center>- - -</center></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="100">Address :</td>
+                                        <td width="100" colspan="7"><center>- - -</center></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="100">Email :</td>
+                                        <td width="100" colspan="7"><center>- - -</center></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="8"><hr></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="100" colspan="2"><center>Sales Rep. Name</center></td>
+                                        <td width="100" colspan="2"><center>Ship Date</center></td>
+                                        <td width="100" colspan="2"><center>Ship Via</center></td>
+                                        <td width="100" colspan="2"><center>Terms</center></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="100" colspan="2"><center>- - -</center></td>
+                                        <td width="100" colspan="2"><center>- - -</center></td>
+                                        <td width="100" colspan="2"><center>- - -</center></td>
+                                        <td width="100" colspan="2"><center>- - -</center></td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td colspan="8"><hr></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="100" colspan="4"><center>Description</center></td>
+                                        <td width="100" ><center>Quantity</center></td>
+                                        <td width="100" ><center>Unit Price</center></td>
+                                        <td width="100" ><center>Total Price</center></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="100" colspan="4"><center>- - -</center></td>
+                                        <td width="100"><center>- - -</center></td>
+                                        <td width="100"><center>- - -</center></td>
+                                        <td width="100"><center>- - -</center></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="100" colspan="4"><center>- - -</center></td>
+                                        <td width="100"><center>- - -</center></td>
+                                        <td width="100"><center>- - -</center></td>
+                                        <td width="100"><center>- - -</center></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="100" colspan="4"><center>- - -</center></td>
+                                        <td width="100"><center>- - -</center></td>
+                                        <td width="100"><center>- - -</center></td>
+                                        <td width="100"><center>- - -</center></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="100" colspan="4"><center>- - -</center></td>
+                                        <td width="100"><center>- - -</center></td>
+                                        <td width="100"><center>- - -</center></td>
+                                        <td width="100"><center>- - -</center></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="100" colspan="4"><center>- - -</center></td>
+                                        <td width="100"><center>- - -</center></td>
+                                        <td width="100"><center>- - -</center></td>
+                                        <td width="100"><center>- - -</center></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="100" colspan="4"><center>- - -</center></td>
+                                        <td width="100"><center>- - -</center></td>
+                                        <td width="100"><center>- - -</center></td>
+                                        <td width="100"><center>- - -</center></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="100" colspan="4"><center>- - -</center></td>
+                                        <td width="100"><center>- - -</center></td>
+                                        <td width="100"><center>- - -</center></td>
+                                        <td width="100"><center>- - -</center></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="8"><hr></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="100" colspan="5">Notes :</td>
+                                        <td width="100"><center>SUB-TOTAL</center></td>
+                                        <td width="100"><center>- - -</center></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="100" colspan="5"><center>- - -</center></td>
+                                        <td width="100"><center>DISCOUNT (%)</center></td>
+                                        <td width="100"><center>- - -</center></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="100" colspan="5"><center>- - -</center></td>
+                                        <td width="100"><center>PST :</center></td>
+                                        <td width="100"><center>- - -</center></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="100" colspan="5"><center>- - -</center></td>
+
+                                        <td width="100"><center>GST :</center></td>
+                                        <td width="100"><center>- - -</center></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="100" colspan="5"><center>- - -</center></td>
+
+                                        <td width="100"><center>TOTAL COST :</center></td>
+                                        <td width="100"><center>- - -</center></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="8"><hr></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="100" colspan="8"><center>Thanks You For You Choose Our Service Station</center></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="8"><hr></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="6"><hr></td>
+                                        <td><input type="submit" name="bill" value="Generate Bill"></td>
+                                    </tr>
+
+
+                                </table>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--END-->
+
+    </main>
+</div>
+
+</body>
+</html>

@@ -16,15 +16,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/css/mdb.min.css" rel="stylesheet">
-<style>
-    .table-responsive>.table-bordered,
-    .table-responsive-sm>.table-bordered,
-    .table-responsive-md>.table-bordered,
-    .table-responsive-lg>.table-bordered,
-    .table-responsive-xl>.table-bordered {
-        border-top: 1px solid #dee2e6
-    }
-</style>
+
 
 </head>
 <body>
@@ -63,6 +55,7 @@
             <a class="mdl-navigation__link" href="Customer_Information.html">Customer Information</a>
             <a class="mdl-navigation__link" href="Service_Booking.html">Service Booked</a>
             <a class="mdl-navigation__link" href="Breakdown_Service.html">Breakdown Service</a>
+            <a class="mdl-navigation__link" href="bill.html">Billing Tab</a>
             <a class="mdl-navigation__link" href="Delivering_Service.html">Delivering Two Wheeler</a>
         </nav>
     </div>
@@ -77,17 +70,18 @@
                     <div class="card-body">
                         <center>
                             <h1><p id="notfound"></p></h1>
-                            <div class="table-responsive">
-                            <table class="mdl-data-table mdl-js-data-table, card-text, table"  border="1px" style=" background: #f7f7f7 ">
+                            <div class="table-responsive, table-scroll-vertical">
+                            <table class="mdl-data-table mdl-js-data-table, card-text, table, " border="1px"
+                                   style=" background: #f7f7f7 ">
                                 <thead>
                                 <tr>
-                                    <th><center>#</center></th>
-                                    <th class="mdl-data-table__cell--non-numeric"><center>Name</center></th>
-                                    <th class="mdl-data-table__cell--non-numeric"><center>Date and Time</center></th>
-                                    <th class="mdl-data-table__cell--non-numeric"><center>Bike Brand</center></th>
-                                    <th class="mdl-data-table__cell--non-numeric"><center>Bike Model</center></th>
-                                    <th class="mdl-data-table__cell--non-numeric"><center>Doorstep Service Type</center></th>
-                                    <th class="mdl-data-table__cell--non-numeric"><center>Location</center></th>
+                                    <th>#</th>
+                                    <th class="mdl-data-table__cell--non-numeric">Name</th>
+                                    <th class="mdl-data-table__cell--non-numeric">Date and Time</th>
+                                    <th class="mdl-data-table__cell--non-numeric">Bike Brand</th>
+                                    <th class="mdl-data-table__cell--non-numeric">Bike Model</th>
+                                    <th class="mdl-data-table__cell--non-numeric">Doorstep Service Type</th>
+                                    <th class="mdl-data-table__cell--non-numeric">Location</th>
                                 </tr>
                                 </thead>
                                 <tbody id=breakdown_service_table_body>

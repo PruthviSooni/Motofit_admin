@@ -3,6 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="fa249e2c-a2ed-4c99-8b01-fa7087fc3127" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Breakdown_Service.html" beforeDir="false" afterPath="$PROJECT_DIR$/Breakdown_Service.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Customer_Information.html" beforeDir="false" afterPath="$PROJECT_DIR$/Customer_Information.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Delivering_Service.html" beforeDir="false" afterPath="$PROJECT_DIR$/Delivering_Service.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Service_Booking.html" beforeDir="false" afterPath="$PROJECT_DIR$/Service_Booking.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,6 +18,13 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -25,6 +37,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -48,6 +61,8 @@
       <workItem from="1584977411879" duration="3037000" />
       <workItem from="1584983227151" duration="448000" />
       <workItem from="1585067192673" duration="3069000" />
+      <workItem from="1585814566684" duration="508000" />
+      <workItem from="1585896178111" duration="4374000" />
     </task>
     <servers />
   </component>

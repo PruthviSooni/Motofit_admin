@@ -17,15 +17,6 @@
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/css/mdb.min.css" rel="stylesheet">
 
-    <style>
-        .table-responsive>.table-bordered,
-        .table-responsive-sm>.table-bordered,
-        .table-responsive-md>.table-bordered,
-        .table-responsive-lg>.table-bordered,
-        .table-responsive-xl>.table-bordered {
-            border-top: 1px solid #dee2e6
-        }
-    </style>
 
 </head>
 <body>
@@ -80,6 +71,7 @@
                 <a class="mdl-navigation__link" href="Customer_Information.html">Customer Information</a>
                 <a class="mdl-navigation__link" href="Service_Booking.html">Service Booked</a>
                 <a class="mdl-navigation__link" href="Breakdown_Service.html">Breakdown Service</a>
+                <a class="mdl-navigation__link" href="bill.html">Billing Tab</a>
                 <a class="mdl-navigation__link" href="Delivering_Service.html">Delivering Vehicle</a>
             </nav>
         </div>
@@ -90,23 +82,22 @@
                     <div class="card-header">
                         <center><h2>Delivering Vehicle</h2></center>
                     </div>
-                    <div class="row" style="padding-top: 1%">
+                    <div class="row" style="padding-left: 10%">
                         <div class="col-sm-6">
-                            <div class="card" >
+                            <div class="card" style="width: 50%; height: 100%">
                                 <div class="card-body">
                                     <center>
-                                        <div class="table-responsive, table-scroll-vertical">
-                                            <h2>Users</h2>
-                                        <table class="mdl-data-table mdl-js-data-table, card-text, table" border="10px"
-                                               style="background: #f7f7f7">
+                                        <div class="table-responsive, table-scroll-vertical" >
+                                        <table class="mdl-data-table mdl-js-data-table" border="10px"
+                                               style="background: #f7f7f7; height: 20%">
                                             <thead>
                                             <tr>
-                                                <th><center>#</center></th>
-                                                <th class="mdl-data-table__cell--non-numeric"><center>Name</center></th>
-                                                <th class="mdl-data-table__cell--non-numeric"><center>Mobile</center></th>
+                                                <th>#</th>
+                                                <th class="mdl-data-table__cell--non-numeric">Name</th>
+                                                <th class="mdl-data-table__cell--non-numeric">Mobile</th>
                                             </tr>
                                             </thead>
-                                            <tbody id=table_body>
+                                            <tbody id=table_body >
                                             </tbody>
                                         </table>
                                         </div>
@@ -115,10 +106,10 @@
                             </div>
                         </div>
                         <div class="col-sm-6">
-                            <div class="card">
+                            <div class="card" style="width: 70%">
                                 <div class="card-body">
                                     <center>
-                                        <h3>SMS to Customer for Drop Vehicle</h3>
+                                        <h5><b>SMS to Customer for Drop Vehicle</b></h5>
                                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                             <input class="mdl-textfield__input" type="text" name="phone_number"
                                                    pattern="-?[0-9]*(\.[0-9]+)?" id="sample1">
