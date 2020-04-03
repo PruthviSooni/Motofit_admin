@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fa249e2c-a2ed-4c99-8b01-fa7087fc3127" name="Default Changelist" comment="" />
+    <list default="true" id="fa249e2c-a2ed-4c99-8b01-fa7087fc3127" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,18 +57,49 @@
       <workItem from="1584983227151" duration="448000" />
       <workItem from="1585067192673" duration="3069000" />
       <workItem from="1585814566684" duration="508000" />
-      <workItem from="1585896178111" duration="4696000" />
+      <workItem from="1585896178111" duration="4909000" />
     </task>
+    <task id="LOCAL-00001" summary="adding Bill generating Module">
+      <created>1585901147475</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1585901147475</updated>
+    </task>
+    <task id="LOCAL-00002" summary="adding Bill generating Module">
+      <created>1585901180020</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1585901180020</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="adding Bill generating Module" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding Bill generating Module" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="390" y="272" key="com.intellij.ide.util.TipDialog" timestamp="1585067197410">
+    <state x="320" y="115" key="#Notifications" timestamp="1585901233596">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="390" y="272" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1585067197410" />
+    <state x="320" y="115" key="#Notifications/0.0.1440.900@0.0.1440.900" timestamp="1585901233596" />
+    <state x="331" y="52" key="CommitChangelistDialog2" timestamp="1585901180043">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="331" y="52" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1585901180043" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1585901199339">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1585901199339" />
+    <state x="390" y="272" key="com.intellij.ide.util.TipDialog" timestamp="1585901278984">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="390" y="272" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1585901278984" />
     <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1584941024319">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
