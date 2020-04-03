@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="fa249e2c-a2ed-4c99-8b01-fa7087fc3127" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Service_Booking.js" beforeDir="false" afterPath="$PROJECT_DIR$/Service_Booking.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +59,7 @@
       <workItem from="1585067192673" duration="3069000" />
       <workItem from="1585814566684" duration="508000" />
       <workItem from="1585896178111" duration="4909000" />
+      <workItem from="1585901278796" duration="790000" />
     </task>
     <task id="LOCAL-00001" summary="adding Bill generating Module">
       <created>1585901147475</created>

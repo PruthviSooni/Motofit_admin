@@ -32,8 +32,9 @@ $(document).ready(function ()
                 var odometer = childrenSnapshot.child("odometer").val();
                 var time = childrenSnapshot.child("time").val();
                 var type_service = childrenSnapshot.child("type_service").val();
+                var spare_parts = childrenSnapshot.child("spare_parts").val();
                 var notes = childrenSnapshot.child("notes").val();
-                $("#service_table_body").append("<tr><td></td><td>" + name + "</td><td>" + date + "</td><td style=\"white-space:pre-wrap; word-wrap:break-word\">" + location + "</td><td>" + odometer + "</td><td>" + time + "</td><td>" + type_service + "</td><td>" + notes + "</td>");
+                $("#service_table_body").append("<tr><td></td><td>" + name + "</td><td>" + date + "</td><td style=\"white-space:pre-wrap; word-wrap:break-word\">" + location + "</td><td>" + odometer + "</td><td>" + time + "</td><td>" + type_service +"</td><td>" + spare_parts + "</td><td>" + notes + "</td>");
                 addSerial_Number();
 
             });
