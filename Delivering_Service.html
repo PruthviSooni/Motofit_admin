@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="">
 <head>
-    <meta name="viewport" content="width=device-width">
+    <meta content="width=device-width" name="viewport">
     <meta charset="utf-8">
     <title>MotoFit</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.brown-red.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://code.getmdl.io/1.3.0/material.brown-red.min.css" rel="stylesheet">
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-app.js"></script>
 
     <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-analytics.js"></script>
 
     <!-- Bootstrap core CSS -->
@@ -20,36 +21,37 @@
 
 </head>
 <body>
+<script src="FirebaseConnect.js"></script>
+<script src="login.js"></script>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs" id="login-div">
+    <main class="mdl-layout__content" style="background: #f7f7f7">
+        <center><img height="300px" src="motofit_img.jpg" style="margin: 20px;" width="300px"></center>
+        <center>
+            <!--  Username          -->
+            <input class="form-control" id="username" placeholder="Email" style="width: 300px;  height: 50px"
+                   type="email"><br>
+
+            <input class="form-control" id="password" placeholder="Password" style="width: 300px; height: 50px"
+                   type="password"><br>
+
+            <button class="btn btn-brown" onclick="login()" style="height: 50px; width: 200px" type="button">Login
+            </button>
+        </center>
+    </main>
+</div>
 <form action="Delivering_Service.php" method="post">
     <script>
         // Your web app's Firebase configuration
         // Your web app's Firebase configuration
-        var firebaseConfig = {
-            apiKey: "AIzaSyCnamvbF_WXwvDeGlRdzkwtONlb05VQ8u0",
-            authDomain: "motofit-33a89.firebaseapp.com",
-            databaseURL: "https://motofit-33a89.firebaseio.com",
-            projectId: "motofit-33a89",
-            storageBucket: "motofit-33a89.appspot.com",
-            messagingSenderId: "894050433093",
-            appId: "1:894050433093:web:fd3b0b4408f4ac01f88b2c",
-            measurementId: "G-8PLQT46RYJ"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-
-        function send_data()
-        {
-            var phone_number =document.getElementById("phone_number").value;
-            firebase.database().ref('Employee_name/'+ phone_number).set(
+        function send_data() {
+            var phone_number = document.getElementById("phone_number").value;
+            firebase.database().ref('Employee_name/' + phone_number).set(
                 {
                     name: document.getElementById("emp_name").value,
                     date: document.getElementById("date").value
                 }
             );
         }
-
-
-
 
         var rootRef = firebase.database().ref().child("Users");
         rootRef.on("child_added", snap => {
@@ -60,7 +62,6 @@
             addSerialNumber();
             ///
             ///Table Index
-
         });
         var addSerialNumber = function () {
             $("#table_body tr").each(function (index) {
@@ -69,14 +70,11 @@
         }
 
 
-
-
-
     </script>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <div
             class="mdl-layout mdl-js-layout mdl-layout--fixed-header
-                    mdl-layout--fixed-tabs">
+                    mdl-layout--fixed-tabs" id="delivering_div">
         <header class="mdl-layout__header">
             <div class="mdl-layout__header-row">
                 <!-- Title -->
@@ -84,29 +82,33 @@
             </div>
         </header>
         <div class="mdl-layout__drawer" style="background: #f7f7f7">
-            <span class="mdl-layout-title"><a href="index.html"><img src="motofit_img.jpg" height="150" width="150"></a></span>
+            <span class="mdl-layout-title"><a href="index.html"><img height="150" src="motofit_img.jpg" width="150"></a></span>
             <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="index.html">Home</a>
                 <a class="mdl-navigation__link" href="Customer_Information.html">Customer Information</a>
                 <a class="mdl-navigation__link" href="Service_Booking.html">Service Booked</a>
                 <a class="mdl-navigation__link" href="Breakdown_Service.html">Breakdown Service</a>
                 <a class="mdl-navigation__link" href="bill_layout.html">Billing Tab</a>
                 <a class="mdl-navigation__link" href="Delivering_Service.html">Delivering Vehicle</a>
+                <button class="btn btn-brown" onclick="signOut()" style="height: 50px; width: 200px; margin: 20px"
+                        type="button">Sign Out
+                </button>
             </nav>
         </div>
+
         <main class="mdl-layout__content is-active" style="background: #f7f7f7">
             <!--BreakDown Service Tab-->
-            <section class="mdl-layout__tab-panel is-active" id="fixed-tab-3">
-                <div class="page-content">
-                    <div class="card-header">
-                        <center><h2>Delivering Vehicle</h2></center>
-                    </div>
-                    <div class="row" style="padding-left: 10%">
-                        <div class="col-sm-6">
-                            <div class="card" style="width: 50%; height: 100%">
-                                <div class="card-body">
-                                    <center>
-                                        <div class="table-responsive, table-scroll-vertical" >
-                                        <table class="mdl-data-table mdl-js-data-table" border="10px"
+            <div class="page-content">
+                <div class="card-header">
+                    <center><h2>Delivering Vehicle</h2></center>
+                </div>
+                <div class="row" style="padding-left: 10%">
+                    <div class="col-sm-6">
+                        <div class="card" style="width: 50%; height: 100%">
+                            <div class="card-body">
+                                <center>
+                                    <div class="table-responsive, table-scroll-vertical">
+                                        <table border="10px" class="mdl-data-table mdl-js-data-table"
                                                style="background: #f7f7f7; height: 20%">
                                             <thead>
                                             <tr>
@@ -115,69 +117,72 @@
                                                 <th class="mdl-data-table__cell--non-numeric">Mobile</th>
                                             </tr>
                                             </thead>
-                                            <tbody id=table_body >
+                                            <tbody id=table_body>
                                             </tbody>
                                         </table>
-                                        </div>
-                                    </center>
-                                </div>
+                                    </div>
+                                </center>
                             </div>
                         </div>
-                        <div class="col-sm-6">
-                            <div class="card" style="width: 70%">
-                                <div class="card-body">
-                                    <center>
-                                        <h5><b>SMS to Customer for Drop Vehicle</b></h5>
-                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                            <input class="mdl-textfield__input" type="text" id="phone_number" name="phone_number"
-                                                   pattern="-?[0-9]*(\.[0-9]+)?" id="sample1">
-                                            <label class="mdl-textfield__label" for="sample1">Phone Number....</label>
-                                            <span class="mdl-textfield__error">Please Enter correct Number!</span>
-                                        </div>
-                                        <br>
-                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                            <input class="mdl-textfield__input" type="date" name="date" id="date"/>
-                                            <label class="mdl-textfield__label" for="date">Select Date</label>
-                                            <span class="mdl-textfield__error">Please Select Date!</span>
-                                        </div>
-                                        <br>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="card" style="width: 70%">
+                            <div class="card-body">
+                                <center>
+                                    <h5><b>SMS to Customer for Drop Vehicle</b></h5>
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" id="phone_number" id="sample1"
+                                               name="phone_number"
+                                               pattern="-?[0-9]*(\.[0-9]+)?" type="text">
+                                        <label class="mdl-textfield__label" for="sample1">Phone Number....</label>
+                                        <span class="mdl-textfield__error">Please Enter correct Number!</span>
+                                    </div>
+                                    <br>
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" id="date" name="date" type="date"/>
+                                        <label class="mdl-textfield__label" for="date">Select Date</label>
+                                        <span class="mdl-textfield__error">Please Select Date!</span>
+                                    </div>
+                                    <br>
 
-                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                            <input class="mdl-textfield__input" type="time" name="time" id="sample3"/>
-                                            <label class="mdl-textfield__label" for="sample3"
-                                                   style="align-items: end"></label>
-                                            <span class="mdl-textfield__error">Please Select Time!</span>
-                                        </div>
-                                        <br>
-                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                            <select name="msg" id="msg" class="mdl-textfield__input"  style="height:30px">
-                                                <option></option>
-                                                <option> Drop Vehicle</option>
-                                                <option> Pick-Up Vehicle</option>
-                                            </select>
-                                            <label class="mdl-textfield__label" for="sample3">Select Service</label>
-                                        </div>
-                                        <br>
-                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                            <select name="emp_name" id="emp_name" class="mdl-textfield__input" style="height:30px">
-                                                <option></option>
-                                                <option>xyz</option>
-                                                <option>abc</option>
-                                                <option>pqr</option>
-                                                <option>ijk</option>
-                                                <option>www</option>
-                                            </select>
-                                            <label class="mdl-textfield__label" for="sample3">Select Employee Name</label>
-                                        </div>
-                                        <br>
-                                        <input type="submit" onclick="send_data()" value="Submit">
-                                    </center>
-                                </div>
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" id="sample3" name="time" type="time"/>
+                                        <label class="mdl-textfield__label" for="sample3"
+                                               style="align-items: end"></label>
+                                        <span class="mdl-textfield__error">Please Select Time!</span>
+                                    </div>
+                                    <br>
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <select class="mdl-textfield__input" id="msg" name="msg"
+                                                style="height:30px">
+                                            <option></option>
+                                            <option> Drop Vehicle</option>
+                                            <option> Pick-Up Vehicle</option>
+                                        </select>
+                                        <label class="mdl-textfield__label" for="sample3">Select Service</label>
+                                    </div>
+                                    <br>
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <select class="mdl-textfield__input" id="emp_name" name="emp_name"
+                                                style="height:30px">
+                                            <option></option>
+                                            <option>xyz</option>
+                                            <option>abc</option>
+                                            <option>pqr</option>
+                                            <option>ijk</option>
+                                            <option>www</option>
+                                        </select>
+                                        <label class="mdl-textfield__label" for="sample3">Select Employee
+                                            Name</label>
+                                    </div>
+                                    <br>
+                                    <input onclick="send_data()" type="submit" value="Submit">
+                                </center>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
             <!--END-->
 
         </main>
