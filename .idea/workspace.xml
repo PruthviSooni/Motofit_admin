@@ -3,7 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="fa249e2c-a2ed-4c99-8b01-fa7087fc3127" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service_Booking.js" beforeDir="false" afterPath="$PROJECT_DIR$/Service_Booking.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Breakdown_Service.html" beforeDir="false" afterPath="$PROJECT_DIR$/Breakdown_Service.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Customer_Information.html" beforeDir="false" afterPath="$PROJECT_DIR$/Customer_Information.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Delivering_Service.html" beforeDir="false" afterPath="$PROJECT_DIR$/Delivering_Service.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Service_Booking.html" beforeDir="false" afterPath="$PROJECT_DIR$/Service_Booking.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bill.html" beforeDir="false" afterPath="$PROJECT_DIR$/bill_layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bill.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,10 +42,12 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -59,7 +67,14 @@
       <workItem from="1585067192673" duration="3069000" />
       <workItem from="1585814566684" duration="508000" />
       <workItem from="1585896178111" duration="4909000" />
-      <workItem from="1585901278796" duration="790000" />
+      <workItem from="1585901278796" duration="1014000" />
+      <workItem from="1585978490433" duration="2384000" />
+      <workItem from="1585983409365" duration="3112000" />
+      <workItem from="1585987667033" duration="30000" />
+      <workItem from="1585987720812" duration="3485000" />
+      <workItem from="1586169508526" duration="348000" />
+      <workItem from="1586251343541" duration="6128000" />
+      <workItem from="1586501295172" duration="213000" />
     </task>
     <task id="LOCAL-00001" summary="adding Bill generating Module">
       <created>1585901147475</created>
@@ -90,21 +105,33 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="320" y="115" key="#Notifications/0.0.1440.900@0.0.1440.900" timestamp="1585901233596" />
+    <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1585988179586">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1585988179586" />
     <state x="331" y="52" key="CommitChangelistDialog2" timestamp="1585901180043">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="331" y="52" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1585901180043" />
+    <state x="544" y="380" key="NewPhpFileDialog" timestamp="1585988435920">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="544" y="380" key="NewPhpFileDialog/0.0.1440.900@0.0.1440.900" timestamp="1585988435920" />
+    <state x="524" y="168" key="RollbackChangesDialog" timestamp="1585983518539">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="524" y="168" key="RollbackChangesDialog/0.0.1440.900@0.0.1440.900" timestamp="1585983518539" />
     <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1585901199339">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1585901199339" />
-    <state x="390" y="272" key="com.intellij.ide.util.TipDialog" timestamp="1585901278984">
+    <state x="390" y="272" key="com.intellij.ide.util.TipDialog" timestamp="1586501295537">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="390" y="272" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1585901278984" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1584941024319">
+    <state x="390" y="272" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1586501295537" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1586254000434">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1584941024319" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1586254000434" />
   </component>
 </project>

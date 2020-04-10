@@ -20,25 +20,10 @@
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/css/mdb.min.css" rel="stylesheet">
 
+
 </head>
 <body>
-<script>
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-        apiKey: "AIzaSyCnamvbF_WXwvDeGlRdzkwtONlb05VQ8u0",
-        authDomain: "motofit-33a89.firebaseapp.com",
-        databaseURL: "https://motofit-33a89.firebaseio.com",
-        projectId: "motofit-33a89",
-        storageBucket: "motofit-33a89.appspot.com",
-        messagingSenderId: "894050433093",
-        appId: "1:894050433093:web:fd3b0b4408f4ac01f88b2c",
-        measurementId: "G-8PLQT46RYJ"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
-</script>
-<script src="Customer_Information.js"></script>
+<form action="bill_info.php" method="post">
 
 
 <div
@@ -56,7 +41,7 @@
             <a class="mdl-navigation__link" href="Customer_Information.html">Customer Information</a>
             <a class="mdl-navigation__link" href="Service_Booking.html">Service Booked</a>
             <a class="mdl-navigation__link" href="Breakdown_Service.html">Breakdown Service</a>
-            <a class="mdl-navigation__link" href="bill.html">Billing Tab</a>
+            <a class="mdl-navigation__link" href="bill_layout.html">Billing Tab</a>
             <a class="mdl-navigation__link" href="Delivering_Service.html">Delivering Two Wheeler</a>
         </nav>
     </div>
@@ -76,19 +61,19 @@
                                     </tr>
                                     <tr>
                                         <td width="100">Name :</td>
-                                        <td width="100" colspan="7"><center>- - -</center></td>
+                                        <td width="100" colspan="7"><input type="text" style="width: 398px" name="name" placeholder="Customer Name"> </td>
                                     </tr>
                                     <tr>
                                         <td width="100">Contact :</td>
-                                        <td width="100" colspan="7"><center>- - -</center></td>
+                                        <td width="100" colspan="7"><input type="text" style="width: 398px" name="contact" placeholder="Customer Contact"> </td>
                                     </tr>
                                     <tr>
                                         <td width="100">Address :</td>
-                                        <td width="100" colspan="7"><center>- - -</center></td>
+                                        <td width="100" colspan="7"><input type="text" style="width: 398px" name="address" placeholder="Customer Address"> </td>
                                     </tr>
                                     <tr>
                                         <td width="100">Email :</td>
-                                        <td width="100" colspan="7"><center>- - -</center></td>
+                                        <td width="100" colspan="7"><input type="email" style="width: 398px" name="email" placeholder="Customer Email"> </td>
                                     </tr>
                                     <tr>
                                         <td colspan="8"><hr></td>
@@ -100,10 +85,10 @@
                                         <td width="100" colspan="2"><center>Terms</center></td>
                                     </tr>
                                     <tr>
-                                        <td width="100" colspan="2"><center>- - -</center></td>
-                                        <td width="100" colspan="2"><center>- - -</center></td>
-                                        <td width="100" colspan="2"><center>- - -</center></td>
-                                        <td width="100" colspan="2"><center>- - -</center></td>
+                                        <td width="100" colspan="2"><input type="text" name="sale_rep" style="width: 98px" placeholder="Sales Rep.name"></td>
+                                        <td width="100" colspan="2"><input type="date" name="date" style="width: 98px" placeholder="Date"></td>
+                                        <td width="100" colspan="2"><input type="text" name="ship_via" style="width: 196px" placeholder="Ship Via"></td>
+                                        <td width="100" colspan="2"><input type="text" name="terms" style="width: 96px" placeholder="Terms"></td>
                                     </tr>
 
 
@@ -117,45 +102,45 @@
                                         <td width="100" ><center>Total Price</center></td>
                                     </tr>
                                     <tr>
-                                        <td width="100" colspan="4"><center>- - -</center></td>
-                                        <td width="100"><center>- - -</center></td>
-                                        <td width="100"><center>- - -</center></td>
-                                        <td width="100"><center>- - -</center></td>
-                                    </tr>
-                                    <tr>
-                                        <td width="100" colspan="4"><center>- - -</center></td>
-                                        <td width="100"><center>- - -</center></td>
-                                        <td width="100"><center>- - -</center></td>
+                                        <td width="100" colspan="4"><input type="text" name="description1" style="width: 199px" placeholder="- - -"></td>
+                                        <td width="100"><input type="text" name="quantity1" style="width: 97px" placeholder="- - -"></td>
+                                        <td width="100"><input type="text" name="unit_price1" style="width: 97px" placeholder="- - -"></td>
                                         <td width="100"><center>- - -</center></td>
                                     </tr>
                                     <tr>
-                                        <td width="100" colspan="4"><center>- - -</center></td>
-                                        <td width="100"><center>- - -</center></td>
-                                        <td width="100"><center>- - -</center></td>
-                                        <td width="100"><center>- - -</center></td>
-                                    </tr>
-                                    <tr>
-                                        <td width="100" colspan="4"><center>- - -</center></td>
-                                        <td width="100"><center>- - -</center></td>
-                                        <td width="100"><center>- - -</center></td>
+                                        <td width="100" colspan="4"><input type="text" name="description2" style="width: 199px" placeholder="- - -"></td>
+                                        <td width="100"><input type="text" name="quantity2" style="width: 97px" placeholder="- - -"></td>
+                                        <td width="100"><input type="text" name="unit_price2" style="width: 97px" placeholder="- - -"></td>
                                         <td width="100"><center>- - -</center></td>
                                     </tr>
                                     <tr>
-                                        <td width="100" colspan="4"><center>- - -</center></td>
-                                        <td width="100"><center>- - -</center></td>
-                                        <td width="100"><center>- - -</center></td>
-                                        <td width="100"><center>- - -</center></td>
-                                    </tr>
-                                    <tr>
-                                        <td width="100" colspan="4"><center>- - -</center></td>
-                                        <td width="100"><center>- - -</center></td>
-                                        <td width="100"><center>- - -</center></td>
+                                        <td width="100" colspan="4"><input type="text" name="description3" style="width: 199px" placeholder="- - -"></td>
+                                        <td width="100"><input type="text" name="quantity3" style="width: 97px" placeholder="- - -"></td>
+                                        <td width="100"><input type="text" name="unit_price3" style="width: 97px" placeholder="- - -"></td>
                                         <td width="100"><center>- - -</center></td>
                                     </tr>
                                     <tr>
-                                        <td width="100" colspan="4"><center>- - -</center></td>
+                                        <td width="100" colspan="4"><input type="text" name="description4" style="width: 199px" placeholder="- - -"></td>
+                                        <td width="100"><input type="text" name="quantity4" style="width: 97px" placeholder="- - -"></td>
+                                        <td width="100"><input type="text" name="unit_price4" style="width: 97px" placeholder="- - -"></td>
                                         <td width="100"><center>- - -</center></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="100" colspan="4"><input type="text" name="description5" style="width: 199px" placeholder="- - -"></td>
+                                        <td width="100"><input type="text" name="quantity5" style="width: 97px" placeholder="- - -"></td>
+                                        <td width="100"><input type="text" name="unit_price5" style="width: 97px" placeholder="- - -"></td>
                                         <td width="100"><center>- - -</center></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="100" colspan="4"><input type="text" name="description6" style="width: 199px" placeholder="- - -"></td>
+                                        <td width="100"><input type="text" name="quantity6" style="width: 97px" placeholder="- - -"></td>
+                                        <td width="100"><input type="text" name="unit_price6" style="width: 97px" placeholder="- - -"></td>
+                                        <td width="100"><center>- - -</center></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="100" colspan="4"><input type="text" name="description7" style="width: 199px" placeholder="- - -"></td>
+                                        <td width="100"><input type="text" name="quantity7" style="width: 97px" placeholder="- - -"></td>
+                                        <td width="100"><input type="text" name="unit_price7" style="width: 97px" placeholder="- - -"></td>
                                         <td width="100"><center>- - -</center></td>
                                     </tr>
                                     <tr>
@@ -213,6 +198,7 @@
 
     </main>
 </div>
+</form>
 
 </body>
 </html>

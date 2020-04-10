@@ -20,8 +20,9 @@
 
 </head>
 <body>
-<form method="post" action="Delivering_Service.php">
+<form action="Delivering_Service.php" method="post">
     <script>
+        // Your web app's Firebase configuration
         // Your web app's Firebase configuration
         var firebaseConfig = {
             apiKey: "AIzaSyCnamvbF_WXwvDeGlRdzkwtONlb05VQ8u0",
@@ -35,7 +36,20 @@
         };
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
-        firebase.analytics();
+
+        function send_data()
+        {
+            var phone_number =document.getElementById("phone_number").value;
+            firebase.database().ref('Employee_name/'+ phone_number).set(
+                {
+                    name: document.getElementById("emp_name").value,
+                    date: document.getElementById("date").value
+                }
+            );
+        }
+
+
+
 
         var rootRef = firebase.database().ref().child("Users");
         rootRef.on("child_added", snap => {
@@ -54,6 +68,10 @@
             });
         }
 
+
+
+
+
     </script>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <div
@@ -71,7 +89,7 @@
                 <a class="mdl-navigation__link" href="Customer_Information.html">Customer Information</a>
                 <a class="mdl-navigation__link" href="Service_Booking.html">Service Booked</a>
                 <a class="mdl-navigation__link" href="Breakdown_Service.html">Breakdown Service</a>
-                <a class="mdl-navigation__link" href="bill.html">Billing Tab</a>
+                <a class="mdl-navigation__link" href="bill_layout.html">Billing Tab</a>
                 <a class="mdl-navigation__link" href="Delivering_Service.html">Delivering Vehicle</a>
             </nav>
         </div>
@@ -111,15 +129,15 @@
                                     <center>
                                         <h5><b>SMS to Customer for Drop Vehicle</b></h5>
                                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                            <input class="mdl-textfield__input" type="text" name="phone_number"
+                                            <input class="mdl-textfield__input" type="text" id="phone_number" name="phone_number"
                                                    pattern="-?[0-9]*(\.[0-9]+)?" id="sample1">
                                             <label class="mdl-textfield__label" for="sample1">Phone Number....</label>
                                             <span class="mdl-textfield__error">Please Enter correct Number!</span>
                                         </div>
                                         <br>
                                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                            <input class="mdl-textfield__input" type="date" name="date" id="sample2"/>
-                                            <label class="mdl-textfield__label" for="sample2">Select Date</label>
+                                            <input class="mdl-textfield__input" type="date" name="date" id="date"/>
+                                            <label class="mdl-textfield__label" for="date">Select Date</label>
                                             <span class="mdl-textfield__error">Please Select Date!</span>
                                         </div>
                                         <br>
@@ -132,7 +150,7 @@
                                         </div>
                                         <br>
                                         <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                            <select name="msg" id="select" class="mdl-textfield__input">
+                                            <select name="msg" id="msg" class="mdl-textfield__input"  style="height:30px">
                                                 <option></option>
                                                 <option> Drop Vehicle</option>
                                                 <option> Pick-Up Vehicle</option>
@@ -140,9 +158,19 @@
                                             <label class="mdl-textfield__label" for="sample3">Select Service</label>
                                         </div>
                                         <br>
-                                        <button class="mdl-button mdl-js-button mdl-button--raised">
-                                            Send SMS
-                                        </button>
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                            <select name="emp_name" id="emp_name" class="mdl-textfield__input" style="height:30px">
+                                                <option></option>
+                                                <option>xyz</option>
+                                                <option>abc</option>
+                                                <option>pqr</option>
+                                                <option>ijk</option>
+                                                <option>www</option>
+                                            </select>
+                                            <label class="mdl-textfield__label" for="sample3">Select Employee Name</label>
+                                        </div>
+                                        <br>
+                                        <input type="submit" onclick="send_data()" value="Submit">
                                     </center>
                                 </div>
                             </div>
