@@ -1,28 +1,27 @@
 <?php
 
-if(isset($_POST['download_bill']))
-{
+if (isset($_POST['download_bill'])) {
     header("Content-type: application/vnd.ms-word");
     header("Content-Disposition: attachment; Filename=bill.doc");
 }
 
-$name=$_POST['name'];
-$contact=$_POST['contact'];
-$email=$_POST['email'];
-$address=$_POST['address'];
+$name = $_POST['name'];
+$contact = $_POST['contact'];
+$email = $_POST['email'];
+$address = $_POST['address'];
 
-$sale_rep=$_POST['sale_rep'];
-$date=$_POST['date'];
-$ship_via=$_POST['ship_via'];
-$terms=$_POST['terms'];
+$sale_rep = $_POST['sale_rep'];
+$date = $_POST['date'];
+$ship_via = $_POST['ship_via'];
+$terms = $_POST['terms'];
 
-$des1=$_POST['description1'];
-$des2=$_POST['description2'];
-$des3=$_POST['description3'];
-$des4=$_POST['description4'];
-$des5=$_POST['description5'];
-$des6=$_POST['description6'];
-$des7=$_POST['description7'];
+$des1 = $_POST['description1'];
+$des2 = $_POST['description2'];
+$des3 = $_POST['description3'];
+$des4 = $_POST['description4'];
+$des5 = $_POST['description5'];
+$des6 = $_POST['description6'];
+$des7 = $_POST['description7'];
 
 
 $u_price1 = $_POST['unit_price1'];
@@ -52,18 +51,12 @@ $price7 = $u_price7 * $quantity7;
 $sub_total = 0;
 $sub_total = $price1 + $price2 + $price3 + $price4 + $price5 + $price6 + $price7;
 
-$discount=0;
-$pst=0;
-$gst=0;
-$total=$discount + $pst + $sub_total;
-
-
-
-
+$discount = 0;
+$pst = 0;
+$gst = 0;
+$total = $discount + $pst + $sub_total;
 
 ?>
-
-
 
 
 <!DOCTYPE html>
@@ -125,134 +118,184 @@ $total=$discount + $pst + $sub_total;
                             <center>
                                 <table border="1" style="background: #f7f7f7">
                                     <tr>
-                                        <td width="100" colspan="8"><center>Bill To</center></td>
+                                        <td width="100" colspan="8">
+                                            <center>Bill To</center>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td width="100">Name :</td>
-                                        <td width="100" colspan="7"><?php echo "".$name; ?></td>
+                                        <td width="100" colspan="7"><?php echo "" . $name; ?></td>
                                     </tr>
                                     <tr>
                                         <td width="100">Contact :</td>
-                                        <td width="100" colspan="7"><?php echo "".$contact; ?></td>
+                                        <td width="100" colspan="7"><?php echo "" . $contact; ?></td>
                                     </tr>
                                     <tr>
                                         <td width="100">Address :</td>
-                                        <td width="100" colspan="7"><?php echo "".$address; ?></td>
+                                        <td width="100" colspan="7"><?php echo "" . $address; ?></td>
                                     </tr>
                                     <tr>
                                         <td width="100">Email :</td>
-                                        <td width="100" colspan="7"><?php echo "".$email; ?></td>
+                                        <td width="100" colspan="7"><?php echo "" . $email; ?></td>
                                     </tr>
                                     <tr>
-                                        <td colspan="8"><hr></td>
+                                        <td colspan="8">
+                                            <hr>
+                                        </td>
                                     </tr>
                                     <tr>
-                                        <td width="100" colspan="2"><center>Sales Rep. Name</center></td>
-                                        <td width="100" colspan="2"><center>Ship Date</center></td>
-                                        <td width="100" colspan="2"><center>Ship Via</center></td>
-                                        <td width="100" colspan="2"><center>Terms</center></td>
+                                        <td width="100" colspan="2">
+                                            <center>Sales Rep. Name</center>
+                                        </td>
+                                        <td width="100" colspan="2">
+                                            <center>Ship Date</center>
+                                        </td>
+                                        <td width="100" colspan="2">
+                                            <center>Ship Via</center>
+                                        </td>
+                                        <td width="100" colspan="2">
+                                            <center>Terms</center>
+                                        </td>
                                     </tr>
                                     <tr>
-                                        <td width="100" colspan="2"><?php echo "".$sale_rep; ?></td>
-                                        <td width="100" colspan="2"><?php echo "".$date; ?></td>
-                                        <td width="100" colspan="2"><?php echo "".$ship_via; ?></td>
-                                        <td width="100" colspan="2"><?php echo "".$terms; ?></td>
+                                        <td width="100" colspan="2"><?php echo "" . $sale_rep; ?></td>
+                                        <td width="100" colspan="2"><?php echo "" . $date; ?></td>
+                                        <td width="100" colspan="2"><?php echo "" . $ship_via; ?></td>
+                                        <td width="100" colspan="2"><?php echo "" . $terms; ?></td>
                                     </tr>
 
 
                                     <tr>
-                                        <td colspan="8"><hr></td>
+                                        <td colspan="8">
+                                            <hr>
+                                        </td>
                                     </tr>
                                     <tr>
-                                        <td width="100" colspan="4"><center>Description</center></td>
-                                        <td width="100" ><center>Quantity</center></td>
-                                        <td width="100" ><center>Unit Price</center></td>
-                                        <td width="100" ><center>Total Price</center></td>
+                                        <td width="100" colspan="4">
+                                            <center>Description</center>
+                                        </td>
+                                        <td width="100">
+                                            <center>Quantity</center>
+                                        </td>
+                                        <td width="100">
+                                            <center>Unit Price</center>
+                                        </td>
+                                        <td width="100">
+                                            <center>Total Price</center>
+                                        </td>
                                     </tr>
                                     <tr>
-                                        <td width="100" colspan="4"><?php echo "".$des1; ?></td>
-                                        <td width="100"><?php echo "".$quantity1; ?></td>
-                                        <td width="100"><?php echo "".$u_price1; ?></td>
-                                        <td width="100"><?php echo "".$price1; ?></td>
+                                        <td width="100" colspan="4"><?php echo "" . $des1; ?></td>
+                                        <td width="100"><?php echo "" . $quantity1; ?></td>
+                                        <td width="100"><?php echo "" . $u_price1; ?></td>
+                                        <td width="100"><?php echo "" . $price1; ?></td>
                                     </tr>
                                     <tr>
-                                        <td width="100" colspan="4"><?php echo "".$des2; ?></td>
-                                        <td width="100"><?php echo "".$quantity2; ?></td>
-                                        <td width="100"><?php echo "".$u_price2; ?></td>
-                                        <td width="100"><?php echo "".$price2; ?></td>
+                                        <td width="100" colspan="4"><?php echo "" . $des2; ?></td>
+                                        <td width="100"><?php echo "" . $quantity2; ?></td>
+                                        <td width="100"><?php echo "" . $u_price2; ?></td>
+                                        <td width="100"><?php echo "" . $price2; ?></td>
                                     </tr>
                                     <tr>
-                                        <td width="100" colspan="4"><?php echo "".$des3; ?></td>
-                                        <td width="100"><?php echo "".$quantity3; ?></td>
-                                        <td width="100"><?php echo "".$u_price3; ?></td>
-                                        <td width="100"><?php echo "".$price3; ?></td>
+                                        <td width="100" colspan="4"><?php echo "" . $des3; ?></td>
+                                        <td width="100"><?php echo "" . $quantity3; ?></td>
+                                        <td width="100"><?php echo "" . $u_price3; ?></td>
+                                        <td width="100"><?php echo "" . $price3; ?></td>
                                     </tr>
                                     <tr>
-                                        <td width="100" colspan="4"><?php echo "".$des4; ?></td>
-                                        <td width="100"><?php echo "".$quantity4; ?></td>
-                                        <td width="100"><?php echo "".$u_price4; ?></td>
-                                        <td width="100"><?php echo "".$price4; ?></td>
+                                        <td width="100" colspan="4"><?php echo "" . $des4; ?></td>
+                                        <td width="100"><?php echo "" . $quantity4; ?></td>
+                                        <td width="100"><?php echo "" . $u_price4; ?></td>
+                                        <td width="100"><?php echo "" . $price4; ?></td>
                                     </tr>
                                     <tr>
-                                        <td width="100" colspan="4"><?php echo "".$des5; ?></td>
-                                        <td width="100"><?php echo "".$quantity5; ?></td>
-                                        <td width="100"><?php echo "".$u_price5; ?></td>
-                                        <td width="100"><?php echo "".$price5; ?></td>
+                                        <td width="100" colspan="4"><?php echo "" . $des5; ?></td>
+                                        <td width="100"><?php echo "" . $quantity5; ?></td>
+                                        <td width="100"><?php echo "" . $u_price5; ?></td>
+                                        <td width="100"><?php echo "" . $price5; ?></td>
                                     </tr>
                                     <tr>
-                                        <td width="100" colspan="4"><?php echo "".$des6; ?></td>
-                                        <td width="100"><?php echo "".$quantity6; ?></td>
-                                        <td width="100"><?php echo "".$u_price6; ?></td>
-                                        <td width="100"><?php echo "".$price6; ?></td>
+                                        <td width="100" colspan="4"><?php echo "" . $des6; ?></td>
+                                        <td width="100"><?php echo "" . $quantity6; ?></td>
+                                        <td width="100"><?php echo "" . $u_price6; ?></td>
+                                        <td width="100"><?php echo "" . $price6; ?></td>
                                     </tr>
                                     <tr>
-                                        <td width="100" colspan="4"><?php echo "".$des7; ?></td>
-                                        <td width="100"><?php echo "".$quantity7; ?></td>
-                                        <td width="100"><?php echo "".$u_price7; ?></td>
-                                        <td width="100"><?php echo "".$price7; ?></td>
+                                        <td width="100" colspan="4"><?php echo "" . $des7; ?></td>
+                                        <td width="100"><?php echo "" . $quantity7; ?></td>
+                                        <td width="100"><?php echo "" . $u_price7; ?></td>
+                                        <td width="100"><?php echo "" . $price7; ?></td>
                                     </tr>
                                     <tr>
-                                        <td colspan="8"><hr></td>
+                                        <td colspan="8">
+                                            <hr>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td width="100" colspan="5">Notes :</td>
-                                        <td width="100"><center>SUB-TOTAL</center></td>
-                                        <td width="100"><?php echo "".$sub_total; ?></td>
+                                        <td width="100">
+                                            <center>SUB-TOTAL</center>
+                                        </td>
+                                        <td width="100"><?php echo "" . $sub_total; ?></td>
                                     </tr>
                                     <tr>
-                                        <td width="100" colspan="5"><center>- - -</center></td>
-                                        <td width="100"><center>DISCOUNT (%)</center></td>
-                                        <td width="100"><?php echo "".$discount."%"; ?></td>
+                                        <td width="100" colspan="5">
+                                            <center>- - -</center>
+                                        </td>
+                                        <td width="100">
+                                            <center>DISCOUNT (%)</center>
+                                        </td>
+                                        <td width="100"><?php echo "" . $discount . "%"; ?></td>
                                     </tr>
                                     <tr>
-                                        <td width="100" colspan="5"><center>- - -</center></td>
-                                        <td width="100"><center>PST :</center></td>
-                                        <td width="100"><?php echo "".$pst; ?></td>
+                                        <td width="100" colspan="5">
+                                            <center>- - -</center>
+                                        </td>
+                                        <td width="100">
+                                            <center>PST :</center>
+                                        </td>
+                                        <td width="100"><?php echo "" . $pst; ?></td>
                                     </tr>
                                     <tr>
-                                        <td width="100" colspan="5"><center>- - -</center></td>
+                                        <td width="100" colspan="5">
+                                            <center>- - -</center>
+                                        </td>
 
-                                        <td width="100"><center>GST :</center></td>
-                                        <td width="100"><?php echo "".$gst; ?></td>
+                                        <td width="100">
+                                            <center>GST :</center>
+                                        </td>
+                                        <td width="100"><?php echo "" . $gst; ?></td>
                                     </tr>
                                     <tr>
-                                        <td width="100" colspan="5"><center>- - -</center></td>
+                                        <td width="100" colspan="5">
+                                            <center>- - -</center>
+                                        </td>
 
-                                        <td width="100"><center>TOTAL COST :</center></td>
-                                        <td width="100"><?php echo "".$total; ?></td>
+                                        <td width="100">
+                                            <center>TOTAL COST :</center>
+                                        </td>
+                                        <td width="100"><?php echo "" . $total; ?></td>
                                     </tr>
                                     <tr>
-                                        <td colspan="8"><hr></td>
+                                        <td colspan="8">
+                                            <hr>
+                                        </td>
                                     </tr>
                                     <tr>
-                                        <td width="100" colspan="8"><center>Thanks You For You Choose Our Service Station</center></td>
+                                        <td width="100" colspan="8">
+                                            <center>Thanks You For You Choose Our Service Station</center>
+                                        </td>
                                     </tr>
                                     <tr>
-                                        <td colspan="8"><hr></td>
+                                        <td colspan="8">
+                                            <hr>
+                                        </td>
                                     </tr>
                                     <tr>
-                                        <td colspan="6"><hr></td>
-                                        <td><input type="submit" value="Download Bill" name="download_bill" ></td>
+                                        <td colspan="6">
+                                            <hr>
+                                        </td>
+                                        <td><input type="submit" value="Download Bill" name="download_bill"></td>
                                     </tr>
 
 
